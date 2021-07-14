@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.loading.nebula</groupId>
+  <artifactId>nebula-spark-java-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>nebula-spark-java-demo</name>
+  <description>Nebula-spark for java demo</description>
+
+  <properties>
+    <compiler.source.version>1.8</compiler.source.version>
+    <compiler.target.version>1.8</compiler.target.version>
+    <nebula.version>2.0.0</nebula.version>
+    <junit.version>4.13.1</junit.version>
+    <fastjson.version>1.2.62</fastjson.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.vesoft</groupId>
+      <artifactId>nebula-spark-connector</artifactId>
+      <version>${nebula.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.vesoft</groupId>
+      <artifactId>nebula-algorithm</artifactId>
+      <version>${nebula.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>${fastjson.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.loading.nebula.Main</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>
