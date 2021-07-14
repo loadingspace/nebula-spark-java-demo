@@ -20,7 +20,7 @@ spark数据写入nebula：
 
 详见：https://github.com/vesoft-inc/nebula-spark-utils/tree/master/nebula-algorithm
 
-使用方式可具体查看单元测试com.loading.nebula.lib.AlgoHandlerTest
+使用方式可具体查看单元测试`com.loading.nebula.lib.AlgoHandlerTest`或者`com.loading.nebula.Main`
 
 |           算法名          |中文说明|应用场景|
  |:------------------------:|:-----------:|:----:|
