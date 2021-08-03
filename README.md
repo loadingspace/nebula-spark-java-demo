@@ -1,6 +1,6 @@
 # nebula-spark-java-demo
 
-该工程为***java调用nebula-spark的相关示例,并且做了一些简单封装***，示例包含nebula-spark-connector和一些算法
+该工程为***java调用nebula-spark的相关示例,并且做了一些简单封装（兼容StringID）***，示例包含nebula-spark-connector和一些算法
 
 nebula-spark详见：https://github.com/vesoft-inc/nebula-spark-utils/tree/v2.0.0
 
